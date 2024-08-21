@@ -1,0 +1,123 @@
+/* Primary Color Update */
+.color-primary {
+  color: #0088cc;
+}
+button{
+  background-color: #0088cc;
+}
+.bg-primary {
+  background-color: #0088cc;
+}
+
+.border-primary {
+  border-color: #0088cc;
+}
+
+/* Loader Styles */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loader div {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #0088cc;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom Styles */
+.nav-link:hover {
+  color: #0088cc;
+}
+
+#mobileMenu {
+  display: none;
+}
+
+#menuToggle:focus + #mobileMenu,
+#menuToggle:active + #mobileMenu {
+  display: block;
+}
+
+/* Social Media Icon Hover Effects */
+.hover\:text-facebook {
+  color: #3b5998;
+}
+.hover\:text-facebook:hover {
+  font-size: 2rem;
+}
+.hover\:text-twitter {
+  color: #3b5998;
+}
+.hover\:text-twitter:hover {
+  font-size: 2rem;
+}
+
+.hover\:text-linkedin {
+  color: #0077b5;
+}
+.hover\:text-linkedin:hover {
+  font-size: 2rem;
+}
+
+.hover\:text-instagram {
+  color: #e4405f;
+}
+.hover\:text-instagram:hover {
+  font-size: 2rem;
+}
+
+/* Navbar Fixed on Scroll */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth Scroll Transition */
+.nav-link {
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover,
+.active-link {
+  color: #4a90e2;
+}
+
+/* Mobile View */
+@media (max-width: 1024px) {
+  #mobileMenu {
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    border-radius: 5px;
+    z-index: 50;
+  }
+}
