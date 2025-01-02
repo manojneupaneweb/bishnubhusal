@@ -1,6 +1,3 @@
-Here’s a professional README file based on the provided content:  
-
-```markdown
 # Bed Prasad Bhusal - Professional Portfolio
 
 ## Overview
@@ -46,28 +43,3 @@ This project is a professional portfolio website created for **Bed Prasad Bhusal
 1. Clone the repository:
    ```bash
    git clone [repository_url]
-   ```
-2. Open the project in your preferred code editor.
-3. Open `index.html` in any browser to view the website.
-
----
-
-## Project Highlights
-- **Responsive Design**: Ensures the portfolio looks great on all screen sizes.
-- **Modern Aesthetic**: Combines simplicity and elegance for a professional look.
-- **Interactive Navbar**: Smooth scrolling with a sticky menu for easy navigation.
-
----
-
-## Live Demo
-Check out the live portfolio: https://bedprasadbhusal.com.np/
-
----
-
-## Contact
-For inquiries or collaborations, feel free to reach out:
-- **Email**: bhusalbishnu209@gmail.com
-- **Phone**: +977-9851019209
-- **Location**: Kathmandu, Nepal
-- **Website**: [Sachetana Media](https://sachetanamedia.com/)
-
