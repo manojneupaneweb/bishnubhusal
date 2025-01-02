@@ -39,7 +39,5 @@ This project is a professional portfolio website created for **Bed Prasad Bhusal
 
 ---
 
-## Setup Instructions
-1. Clone the repository:
-   ```bash
-   git clone [repository_url]
+## Live Demo
+Check out the live portfolio: (https://bedprasadbhusal.com.np/)
