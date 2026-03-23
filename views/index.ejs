@@ -1,223 +1,362 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bed Prasad Bhusal - Portfolio</title>
-  <link rel="shortcut icon" href="./src/images/logo.jpg" type="image/x-icon">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdn.tailwindcss.com"></script> 
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>B&B Group | Bed Prasad Bhusal - Executive Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css">
+<style>
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #fefefe; }
+.color-primary { color: #0e7c7c; }
+.bg-primary-custom { background-color: #0e7c7c; }
+.border-primary { border-color: #0e7c7c; }
+.hero-overlay-gradient { background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,40,40,0.65) 100%); }
+.card-hover-effect { transition: all 0.3s ease; }
+.card-hover-effect:hover { transform: translateY(-6px); box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.15); }
+.nav-link { position: relative; transition: color 0.2s ease; }
+.nav-link:hover { color: #0e7c7c; }
+#loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #ffffff; display: flex; justify-content: center; align-items: center; z-index: 9999; transition: opacity 0.5s ease, visibility 0.5s; }
+#loader div { width: 48px; height: 48px; border: 5px solid #e2e8f0; border-top: 5px solid #0e7c7c; border-radius: 50%; animation: spin 1s linear infinite; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.logo-img { max-height: 45px; width: auto; transition: all 0.2s ease; }
+@media (max-width: 640px) { .logo-img { max-height: 38px; } }
+.flag-icon { width: 32px; height: auto; object-fit: contain; }
+@media (min-width: 768px) { .flag-icon { width: 40px; } }
+.nav-active { color: #0e7c7c !important; font-weight: 600; position: relative; }
+.nav-active::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 2px; background: #0e7c7c; border-radius: 2px; }
+</style>
 </head>
+<body class="antialiased">
 
-<body>
+<div id="loader"><div></div></div>
 
-  <!-- Loader -->
-  <div id="loader">
-    <div></div>
-  </div>
+<nav class="navbar bg-white/95 backdrop-blur-sm shadow-md px-4 sm:px-6 md:px-12 fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
+<div class="flex-1 flex items-center">
+<a class="flex items-center">
+<img src="./images/logo.jpg" alt="B&B Group Logo" class="logo-img rounded-md object-contain" onerror="this.onerror=null; this.src='https://placehold.co/200x60?text=B%26B+Group';">
+</a>
+</div>
+<div class="hidden lg:flex lg:flex-1 lg:justify-center gap-6 items-center">
+<a href="#home" class="nav-link text-gray-700 font-semibold hover:color-primary transition" data-nav="home">Home</a>
+<a href="#about" class="nav-link text-gray-700 font-semibold hover:color-primary transition" data-nav="about">About</a>
+<a href="#service" class="nav-link text-gray-700 font-semibold hover:color-primary transition" data-nav="service">Services</a>
+<a href="#contact" class="nav-link text-gray-700 font-semibold hover:color-primary transition" data-nav="contact">Contact</a>
+</div>
+<div class="flex items-center gap-2">
+<div class="mx-1 sm:mx-2">
+<img src="./images/flag.gif" alt="Nepal Flag" class="flag-icon rounded-sm">
+</div>
+<div class="lg:hidden dropdown dropdown-end">
+<label tabindex="0" class="btn btn-ghost btn-circle">
+<i class="fas fa-bars text-xl text-gray-700"></i>
+</label>
+<ul tabindex="0" class="dropdown-menu dropdown-content z-50 menu p-2 shadow-lg bg-white rounded-box w-52 mt-3">
+<li><a href="#home" class="nav-link" data-nav="home">Home</a></li>
+<li><a href="#about" class="nav-link" data-nav="about">About</a></li>
+<li><a href="#service" class="nav-link" data-nav="service">Services</a></li>
+<li><a href="#contact" class="nav-link" data-nav="contact">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
 
-  <!-- Navbar -->
-  <div class="navbar bg-white shadow-lg px-10 fixed top-0 w-full z-50 transition duration-700 ease-in-out" id="navbar">
-    <div class="flex-1">
-      <a class="btn btn-ghost text-3xl font-bold color-primary">B.B</a>
-    </div>
-    <div class="flex-none hidden lg:block">
-      <ul class="menu menu-horizontal px-1 text-base font-semibold">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About Me</a></li>
-        <li><a href="#service" class="nav-link">Services</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-    </div>
-    <div class="flex-none lg:hidden">
-      <button class="btn btn-ghost" id="menuToggle">
-        <i class="fas fa-bars text-xl"></i>
-      </button>
-      <ul class="menu menu-vertical mt-2 hidden" id="mobileMenu">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About Me</a></li>
-        <li><a href="#service" class="nav-link">Services</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-    </div>
-  </div>
+<main>
+<section id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('https://picsum.photos/id/104/1920/1080'); background-size: cover;">
+<div class="absolute inset-0 hero-overlay-gradient"></div>
+<div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+<div class="mb-6 flex justify-center">
+<img class="w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 rounded-full border-4 border-white shadow-2xl object-cover" src="./images/K_W_0816.jpg" alt="Bed Prasad Bhusal portrait" onerror="this.src='https://randomuser.me/api/portraits/men/32.jpg'">
+</div>
+<h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+I'm <br><span class="text-3xl sm:text-4xl md:text-6xl font-black drop-shadow-lg">Bed Prasad Bhusal</span>
+</h1>
+<div class="mt-4 text-base sm:text-lg md:text-xl text-gray-100 max-w-2xl mx-auto leading-relaxed px-2">
+<p>Chairman of <span class="font-bold text-cyan-300">Sachetana Media</span> <br>
+Managing Director at <span class="font-bold text-cyan-300">B&B Group</span><br>
+Nepal's premier supplier of surgical & medical equipment.</p>
+</div>
+<div class="mt-6 sm:mt-8">
+<a href="#about" class="inline-block px-6 sm:px-8 py-2.5 sm:py-3 bg-cyan-700 hover:bg-teal-800 text-white font-semibold rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">Explore Profile</a>
+</div>
+</div>
+</section>
 
-  <!-- Hero Section -->
-  <div id="home"
-    class="hero h-screen flex flex-col items-center mt-12 justify-center bg-cover bg-center bg-[url('./src/images/hero.jpg')] text-white relative">
+<section id="about" class="py-16 sm:py-20 px-4 sm:px-5 md:px-12 bg-white scroll-mt-20">
+<div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8 md:gap-12">
+<div class="flex-shrink-0 w-full lg:w-auto flex justify-center">
+<img src="./images/about.jpeg" alt="Executive leadership" class="rounded-2xl shadow-2xl object-cover w-64 sm:w-80 md:w-96 lg:max-w-md h-auto border border-gray-100" onerror="this.src='https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=500&fit=crop'">
+</div>
+<div class="flex-1 space-y-4 sm:space-y-5">
+<h2 class="text-3xl sm:text-4xl font-bold color-primary border-l-4 border-cyan-700 pl-4">About Me</h2>
+<p class="text-gray-700 text-base sm:text-lg leading-relaxed">
+I am <strong class="color-primary">Bed Prasad Bhusal</strong>, a visionary entrepreneur and business leader steering the medical equipment industry in Nepal as Managing Director of <strong>B&B Group</strong>. With decades of market expertise, I've revolutionized surgical supply chains, ensuring top-tier quality and reliability.
+</p>
+<p class="text-gray-700 text-base sm:text-lg leading-relaxed">
+Beyond healthcare, as Chairman of <strong>Sachetana Media Pvt. Ltd.</strong>, I drive impactful storytelling and digital innovation. My mission: blend ethical business practices with forward-thinking strategies to create lasting value across sectors.
+</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-4 bg-gray-50 p-4 sm:p-5 rounded-xl">
+<div>
+<p class="font-semibold flex items-center gap-2 text-sm sm:text-base"><i class="fas fa-map-marker-alt text-cyan-700"></i> City:</p>
+<p class="text-gray-800 text-sm sm:text-base">Kathmandu, Nepal</p>
+</div>
+<div>
+<p class="font-semibold flex items-center gap-2 text-sm sm:text-base"><i class="fas fa-graduation-cap text-cyan-700"></i> Education:</p>
+<p class="text-gray-800 text-sm sm:text-base">Masters in Business Leadership</p>
+</div>
+<div>
+<p class="font-semibold flex items-center gap-2 text-sm sm:text-base"><i class="fas fa-briefcase text-cyan-700"></i> Experience:</p>
+<p class="text-gray-800 text-sm sm:text-base">15+ Years in Healthcare & Media</p>
+</div>
+<div>
+<p class="font-semibold flex items-center gap-2 text-sm sm:text-base"><i class="fas fa-trophy text-cyan-700"></i> Expertise:</p>
+<p class="text-gray-800 text-sm sm:text-base">Strategic Management, Medical Distribution</p>
+</div>
+</div>
+<a href="#contact" class="inline-block mt-4 sm:mt-5 px-6 sm:px-8 py-2.5 sm:py-3 bg-cyan-700 hover:bg-pink-700 text-white font-medium rounded-full shadow transition-all text-sm sm:text-base">Connect With Me</a>
+</div>
+</div>
+</section>
 
-    <!-- Gradient Overlay for Better Text Visibility -->
-    <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-transparent"></div>
+<section id="service" class="py-16 sm:py-20 bg-gradient-to-br from-gray-50 to-gray-100 scroll-mt-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-5 md:px-8">
+<div class="text-center mb-10 sm:mb-12">
+<h2 class="text-3xl sm:text-4xl font-bold color-primary inline-block border-b-4 border-cyan-700 pb-2">Core Ventures</h2>
+<p class="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto mt-4 sm:mt-5 px-2">Delivering excellence in healthcare infrastructure and modern media ecosystems across Nepal.</p>
+</div>
+<div class="flex flex-col lg:flex-row justify-center items-stretch gap-6 sm:gap-8 lg:gap-10 mt-6">
+<div class="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 card-hover-effect flex-1 max-w-md mx-auto w-full">
+<div class="p-6 sm:p-8 text-center">
+<div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto bg-teal-50 rounded-full flex items-center justify-center mb-4 sm:mb-5">
+<img src="https://sachetanamedia.com/media/logoimage/media.jpg" alt="Sachetana Media" class="w-16 h-16 sm:w-20 sm:h-20 object-contain rounded-md" onerror="this.src='https://placehold.co/200x200?text=Sachetana+Media'">
+</div>
+<h3 class="text-xl sm:text-2xl font-bold text-gray-800">Sachetana Media Pvt. Ltd.</h3>
+<p class="text-gray-500 mt-2 sm:mt-3 text-xs sm:text-sm uppercase tracking-wide">Chairman</p>
+<p class="text-gray-600 mt-3 sm:mt-4 leading-relaxed text-sm sm:text-base">Innovative media house driving digital narratives, creative campaigns, and next-gen broadcasting solutions. Elevating brands through authentic storytelling.</p>
+<div class="mt-5 sm:mt-6">
+<a href="https://sachetanamedia.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-cyan-700 font-semibold border-b-2 border-cyan-700 hover:gap-3 transition-all text-sm sm:text-base">Visit Website <i class="fas fa-arrow-right text-xs sm:text-sm"></i></a>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 card-hover-effect flex-1 max-w-md mx-auto w-full">
+<div class="p-6 sm:p-8 text-center">
+<div class="w-24 h-24 sm:w-28 sm:h-28 mx-auto bg-cyan-50 rounded-full flex items-center justify-center mb-4 sm:mb-5">
+<span class="text-4xl sm:text-5xl font-black color-primary">B&B</span>
+</div>
+<h3 class="text-xl sm:text-2xl font-bold text-gray-800">B&B Group Pvt. Ltd.</h3>
+<p class="text-gray-500 mt-2 sm:mt-3 text-xs sm:text-sm uppercase tracking-wide">Managing Director</p>
+<p class="text-gray-600 mt-3 sm:mt-4 leading-relaxed text-sm sm:text-base">Nepal's leading supplier of surgical, medical, and hospital equipment. Committed to precision, quality assurance, and healthcare advancement across the nation.</p>
+<div class="mt-5 sm:mt-6">
+<span class="inline-flex items-center gap-2 text-cyan-700 font-semibold text-sm sm:text-base"><i class="fas fa-check-circle"></i> Industry Leader Since 2008</span>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-12 sm:mt-16">
+<p class="text-gray-600 italic text-sm sm:text-md max-w-3xl mx-auto px-3">“Our dual commitment: equipping Nepal's healthcare backbone & shaping responsible media narratives. Excellence is our standard.”</p>
+</div>
+</div>
+</section>
 
-    <!-- Content -->
-    <div class="relative z-10 max-w-3xl flex flex-col items-center text-center space-y-6 px-4">
-      <!-- Profile Picture -->
-      <div class="">
-        <img class="rounded-full w-40 h-40 border-4 bg-center border-white shadow-lg" src="./src/images/hero.jpeg"
-          alt="Bed Prasad Bhusal">
-      </div>
-      <!-- Introduction Text -->
-      <h1 class="text-2xl font-extrabold leading-tight">
-        I'm <br>
-        <span class="text-4xl font-bold">Bed Prasad Bhusal</span>
-      </h1>
-      <!-- Subtext -->
-      <p class="text-xl font-light max-w-xl leading-relaxed">
-        Chairman of <span class="text-pink-700 font-bold"> <a href="https://sachetanamedia.com/"
-            target="_blank">Sachetana Media</a> </span> <br>
-        MD at B&B Group, <span class="text-pink-700 font-bold">B&B Group</span> <br>
-        (Nepal's leading supplier of surgical and medical equipment.)
-      </p>
-      <!-- Call-to-Action Button -->
-      <button
-        class="btn px-8 bg-cyan-700 text-white border-none text-lg font-medium rounded-full shadow-lg hover:bg-pink-700 hover:shadow-2xl transition-all">
-        <a href="#about">About Me</a>
-      </button>
-    </div>
-  </div>
+<section id="contact" class="py-16 sm:py-20 bg-white scroll-mt-20">
+<div class="max-w-6xl mx-auto px-4 sm:px-5 md:px-8">
+<div class="text-center mb-10 sm:mb-12">
+<h2 class="text-3xl sm:text-4xl font-bold color-primary">Get In Touch</h2>
+<div class="w-20 sm:w-24 h-1 bg-cyan-700 mx-auto mt-2 sm:mt-3 rounded-full"></div>
+<p class="text-gray-600 text-base sm:text-lg mt-4 sm:mt-5 px-2">Let's collaborate on new opportunities, partnerships, or ventures.</p>
+</div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8 mt-6 sm:mt-8">
+<div class="bg-gray-50 rounded-2xl p-5 sm:p-6 text-center shadow-md hover:shadow-xl transition border-t-4 border-cyan-700">
+<div class="w-14 h-14 sm:w-16 sm:h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto">
+<i class="fas fa-envelope text-xl sm:text-2xl color-primary"></i>
+</div>
+<h3 class="text-lg sm:text-xl font-bold mt-4 sm:mt-5">Email</h3>
+<a href="mailto:bhusalbishnu209@gmail.com" class="text-gray-700 mt-2 block hover:color-primary text-sm sm:text-base break-all">bhusalbishnu209@gmail.com</a>
+</div>
+<div class="bg-gray-50 rounded-2xl p-5 sm:p-6 text-center shadow-md hover:shadow-xl transition border-t-4 border-cyan-700">
+<div class="w-14 h-14 sm:w-16 sm:h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto">
+<i class="fas fa-phone-alt text-xl sm:text-2xl color-primary"></i>
+</div>
+<h3 class="text-lg sm:text-xl font-bold mt-4 sm:mt-5">Phone / WhatsApp</h3>
+<a href="tel:+9779851019209" class="text-gray-700 mt-2 block hover:color-primary text-sm sm:text-base">+977-9851019209</a>
+</div>
+<div class="bg-gray-50 rounded-2xl p-5 sm:p-6 text-center shadow-md hover:shadow-xl transition border-t-4 border-cyan-700">
+<div class="w-14 h-14 sm:w-16 sm:h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto">
+<i class="fas fa-map-marker-alt text-xl sm:text-2xl color-primary"></i>
+</div>
+<h3 class="text-lg sm:text-xl font-bold mt-4 sm:mt-5">Head Office</h3>
+<p class="text-gray-700 mt-2 text-sm sm:text-base">Kathmandu, Nepal</p>
+<p class="text-xs sm:text-sm text-gray-500">Baluwatar, Corporate Hub</p>
+</div>
+</div>
+<div class="mt-12 sm:mt-16 text-center">
+<h3 class="text-xl sm:text-2xl font-semibold text-gray-800">Connect on Social Networks</h3>
+<div class="flex justify-center gap-6 sm:gap-8 md:gap-10 mt-5 sm:mt-6 flex-wrap">
+<a href="https://www.facebook.com/bhusalbishnu56" target="_blank" rel="noopener noreferrer" class="group flex flex-col items-center">
+<div class="bg-gray-100 p-2.5 sm:p-3 rounded-full w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center group-hover:bg-blue-600 transition">
+<i class="fab fa-facebook-f text-xl sm:text-2xl text-gray-700 group-hover:text-white"></i>
+</div>
+<span class="text-xs sm:text-sm text-gray-600 mt-1 sm:mt-2">Facebook</span>
+</a>
+<a href="#" class="group flex flex-col items-center">
+<div class="bg-gray-100 p-2.5 sm:p-3 rounded-full w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center group-hover:bg-sky-500 transition">
+<i class="fab fa-twitter text-xl sm:text-2xl text-gray-700 group-hover:text-white"></i>
+</div>
+<span class="text-xs sm:text-sm text-gray-600 mt-1 sm:mt-2">Twitter</span>
+</a>
+<a href="#" class="group flex flex-col items-center">
+<div class="bg-gray-100 p-2.5 sm:p-3 rounded-full w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center group-hover:bg-gradient-to-tr group-hover:from-pink-500 group-hover:to-yellow-500 transition">
+<i class="fab fa-instagram text-xl sm:text-2xl text-gray-700 group-hover:text-white"></i>
+</div>
+<span class="text-xs sm:text-sm text-gray-600 mt-1 sm:mt-2">Instagram</span>
+</a>
+<a href="#" class="group flex flex-col items-center">
+<div class="bg-gray-100 p-2.5 sm:p-3 rounded-full w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center group-hover:bg-blue-800 transition">
+<i class="fab fa-linkedin-in text-xl sm:text-2xl text-gray-700 group-hover:text-white"></i>
+</div>
+<span class="text-xs sm:text-sm text-gray-600 mt-1 sm:mt-2">LinkedIn</span>
+</a>
+</div>
+</div>
+<div class="mt-10 sm:mt-12 bg-gray-50 p-5 sm:p-8 rounded-2xl max-w-3xl mx-auto shadow-sm">
+<p class="text-center text-gray-700 text-sm sm:text-base"><i class="fas fa-clock color-primary mr-2"></i> For urgent business inquiries, direct call or email. Corporate visits by appointment.</p>
+<div class="flex flex-wrap justify-center mt-3 sm:mt-4 gap-3 sm:gap-4 text-xs sm:text-sm text-cyan-800">
+<span><i class="fas fa-certificate"></i> ISO Certified Partner</span>
+<span><i class="fas fa-handshake"></i> 500+ Hospital Networks</span>
+</div>
+</div>
+</div>
+</section>
+</main>
 
-  <!-- About Section -->
-  <section id="about" class="about flex justify-center items-center py-20 ">
-    <div class="hero md:w-4/5">
-      <div class="hero-content flex-col lg:flex-row">
-        <img src="./src/images/about.jpeg" class="max-w-sm rounded-lg shadow-2xl bg-cover" />
-        <div class="lg:ml-10">
-          <h1 class="text-3xl font-bold color-primary">About Me</h1>
-          <p class="py-6 text-lg text-gray-600">
-            I am Bed Prasad Bhusal, a seasoned professional in the surgical and medical equipment industry, serving as
-            the Managing Director at B&B Group. With years of experience and a deep understanding of the market, I have
-            also expanded my expertise to media as the Chairman of Sachetana Media Pvt. Ltd. <br>
-            <span>
-              A passion for innovation and business excellence, I strive to bring positive change and sustainable growth
-              to every venture I undertake.
-            </span>
-          </p>
-          <div class="flex gap-12">
-            <p class="font-semibold flex flex-col">
-              <span><i class="fa-solid fa-chevron-right opacity-70 my-2"></i> City :</span>
-              <span><i class="fa-solid fa-chevron-right opacity-70 my-2"></i> Education :</span>
-            </p>
-            <p class="font-semibold flex flex-col">
-              <span class="my-2">Kathmandu, Nepal</span>
-              <span class="">Degree</span>
-            </p>
-          </div>
-          <button
-        class="btn px-8 mt-7 bg-cyan-700 text-white border-none text-lg font-medium rounded-full shadow-lg hover:bg-pink-700 hover:shadow-2xl transition-all">
-        <a href="#contact">Contact me</a>
-      </button>
-        </div>
-      </div>
-    </div>
-  </section>
+<footer class="bg-gray-900 text-gray-300 py-8 sm:py-12">
+<div class="max-w-6xl mx-auto px-4 sm:px-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+<div class="text-center sm:text-left">
+<h4 class="text-white text-lg sm:text-xl font-bold mb-2 sm:mb-3">Bed Prasad Bhusal</h4>
+<p class="text-xs sm:text-sm">Strategic business leader bridging healthcare & media excellence in Nepal.</p>
+</div>
+<div class="text-center sm:text-left">
+<h5 class="text-white font-semibold mb-2 sm:mb-3 text-sm sm:text-base">Quick Links</h5>
+<ul class="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
+<li><a href="#home" class="hover:text-teal-300 transition">Home</a></li>
+<li><a href="#about" class="hover:text-teal-300 transition">About</a></li>
+<li><a href="#service" class="hover:text-teal-300 transition">Services</a></li>
+<li><a href="#contact" class="hover:text-teal-300 transition">Contact</a></li>
+</ul>
+</div>
+<div class="text-center sm:text-left">
+<h5 class="text-white font-semibold mb-2 sm:mb-3 text-sm sm:text-base">Corporate Ethics</h5>
+<p class="text-xs sm:text-sm">Committed to sustainable growth, transparency, and world-class service delivery across all ventures.</p>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-6 sm:mt-8 pt-5 sm:pt-6 text-center text-xs sm:text-sm text-gray-400">
+<p>© 2025 Bed Prasad Bhusal — B&B Group & Sachetana Media. All intellectual property reserved.</p>
+</div>
+</footer>
 
-  <!-- Services Section -->
-  <section id="service" class="w-full h-full bg-base-200 py-16">
-    <div class="max-w-3xl mx-auto text-center">
-      <h1 class="text-3xl font-bold color-primary">Services</h1>
-      <p class="text-lg leading-relaxed text-gray-700 mt-4">
-        My mission is to drive growth, foster industry advancement, and deliver outstanding results for clients across
-        Nepal and beyond.
-      </p>
-    </div>
+<script>
+(function() {
+const loader = document.getElementById("loader");
+if (loader) {
+window.addEventListener("load", function() {
+setTimeout(() => {
+loader.style.opacity = "0";
+loader.style.visibility = "hidden";
+}, 400);
+});
+}
 
-    <div class="flex flex-row flex-wrap items-center justify-evenly mt-10">
-      <!-- <div class="cursor-pointer flex flex-col text-center">
-        <a href="https://sachetanamedia.com/" class="font-bold text-center text-2xl">
-          <img class="m-5 border border-current text-center  p-8 rounded-md"
-            src="https://sachetanamedia.com/media/logoimage/media.jpg" alt="">
-          Sachetana Media Pvt. Ltd.</a>
-      </div -->
-      <div class="cursor-pointer flex flex-col items-center">
-        <img class="m-5 border border-current text-center  p-8 rounded-md"
-          src="https://sachetanamedia.com/media/logoimage/media.jpg" alt="">
-        <a href="https://sachetanamedia.com/" class="font-bold text-center text-2xl">
-          Sachetana Media Pvt. Ltd.
-          </a>
-      </div>
-      <div class="cursor-pointer flex flex-col items-center">
-        <a href="https://sachetanamedia.com/" class="font-bold text-center text-2xl">
-          <p class="m-5 text-cyan-700 border border-current text-center p-8 rounded-md text-5xl">B&B</p>
-          B&B Group Pvt. Ltd.</a>
-      </div>
-    </div>
-  </section>
+function updateActiveNav() {
+const sections = ['home', 'about', 'service', 'contact'];
+let currentSection = 'home';
+const scrollPosition = window.scrollY + 150;
 
-  <!-- Contact Section -->
-  <section id="contact" class="bg-white py-20 px-5 md:px-0">
-    <div class="max-w-5xl mx-auto text-center">
-      <h1 class="text-3xl font-bold color-primary">Get In Touch</h1>
-      <p class="text-lg leading-relaxed text-gray-700 mt-4">
-        Feel free to reach out for any inquiries or business opportunities.
-      </p>
-      <div class="flex flex-wrap items-center justify-center gap-8 mt-10">
-        <!-- Contact Box 1 -->
-        <div class="bg-white p-6 shadow-lg rounded-lg text-center border-t-2 border-cyan-700">
-          <i class="fas fa-envelope fa-3x color-primary"></i>
-          <h3 class="text-xl font-semibold color-primary mt-4">Email</h3>
-          <p class="text-gray-700 mt-2">bhusalbishnu209@gmail.com</p>
-        </div>
-  
-        <!-- Contact Box 2 -->
-        <div class="bg-white p-6 shadow-lg rounded-lg text-center border-t-2 border-cyan-700">
-          <i class="fas fa-phone-alt fa-3x color-primary"></i>
-          <h3 class="text-xl font-semibold color-primary mt-4">Phone</h3>
-          <p class="text-gray-700 mt-2">+977-9851019209</p>
-        </div>
-  
-        <!-- Contact Box 3 -->
-        <div class="bg-white p-6 shadow-lg rounded-lg text-center border-t-2 border-cyan-700">
-          <i class="fas fa-map-marker-alt fa-3x color-primary"></i>
-          <h3 class="text-xl font-semibold color-primary mt-4">Location</h3>
-          <p class="text-gray-700 mt-2">Kathmandu, Nepal</p>
-        </div>
-      </div>
-      <div class="flex flex-wrap items-start justify-center gap-8 mt-12">
-        <!-- Social Media Icon 1 -->
-        <div class="flex flex-col items-center">
-          <a href="https://www.facebook.com/bhusalbishnu56" target="_blank" class="text-4xl text-gray-600 hover:text-facebook">
-            <i class="fab fa-facebook"></i>
-          </a>
-          <span class="text-gray-600 mt-2">Facebook</span>
-        </div>
-        <!-- Social Media Icon 2 -->
-        <div class="flex flex-col items-center">
-          <a href="#" class="text-4xl text-gray-600 hover:text-twitter">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <span class="text-gray-600 mt-2">Twitter</span>
-        </div>
-        <!-- Social Media Icon 3 -->
-        <!-- <div class="flex flex-col items-center">
-          <a href="#" class="text-4xl text-gray-600 hover:text-linkedin">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <span class="text-gray-600 mt-2">LinkedIn</span>
-        </div> -->
-        <!-- Social Media Icon 4 -->
-        <div class="flex flex-col items-center">
-          <a href="#" class="text-4xl text-gray-600 hover:text-instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <span class="text-gray-600 mt-2">Instagram</span>
-        </div>
-      </div>
-    </div>
-  </section>
+for (let section of sections) {
+const element = document.getElementById(section);
+if (element) {
+const offsetTop = element.offsetTop;
+const offsetBottom = offsetTop + element.offsetHeight;
+if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+currentSection = section;
+break;
+}
+}
+}
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-10 text-center">
-    <p class="text-sm">
-      © 2024 Bed Prasad Bhusal. All rights reserved.
-    </p>
-  </footer>
-<script src="./style.js"></script>
+document.querySelectorAll('.nav-link[data-nav]').forEach(link => {
+const navValue = link.getAttribute('data-nav');
+if (navValue === currentSection) {
+link.classList.add('nav-active');
+} else {
+link.classList.remove('nav-active');
+}
+});
+}
+
+const navLinks = document.querySelectorAll(".nav-link, .dropdown-menu a");
+navLinks.forEach((link) => {
+link.addEventListener("click", function(e) {
+const targetId = this.getAttribute("href");
+if (targetId && targetId.startsWith("#")) {
+e.preventDefault();
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+const offset = 70;
+const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+window.scrollTo({ top: elementPosition - offset, behavior: "smooth" });
+const mobileMenu = document.querySelector(".dropdown-menu");
+if (mobileMenu && mobileMenu.classList.contains("menu-open")) {
+mobileMenu.classList.remove("menu-open");
+}
+setTimeout(() => updateActiveNav(), 100);
+}
+}
+});
+});
+
+const dropdownToggle = document.querySelector(".dropdown label");
+if (dropdownToggle) {
+dropdownToggle.addEventListener("click", function(e) {
+const menuPanel = document.querySelector(".dropdown-menu");
+if (menuPanel) {
+menuPanel.classList.toggle("menu-open");
+}
+});
+}
+
+window.addEventListener("scroll", function() {
+const navbar = document.getElementById("navbar");
+if (window.scrollY > 20) {
+navbar.classList.add("shadow-lg", "bg-white/95");
+navbar.classList.remove("bg-white");
+} else {
+navbar.classList.add("bg-white");
+navbar.classList.remove("bg-white/95");
+}
+updateActiveNav();
+});
+
+window.addEventListener('load', function() {
+updateActiveNav();
+});
+
+const style = document.createElement("style");
+style.textContent = `
+.dropdown-menu.menu-open { display: block !important; }
+.dropdown-menu:not(.menu-open) { display: none; }
+@media (max-width: 1024px) {
+.dropdown-menu { display: none; position: absolute; right: 0; background: white; border-radius: 1rem; box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1); }
+}
+.scroll-mt-20 { scroll-margin-top: 80px; }
+`;
+document.head.appendChild(style);
+const mediaImg = document.querySelector('img[alt="Sachetana Media"]');
+if (mediaImg && mediaImg.complete && mediaImg.naturalWidth === 0) {
+mediaImg.src = "https://placehold.co/200x200?text=Sachetana+Media";
+}
+})();
+</script>
 </body>
-
 </html>
